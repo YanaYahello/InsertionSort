@@ -2,15 +2,15 @@
  * read data from textarea, prints validation message if needed
  */
 function readData(){
-    let inputArea = document.getElementById('inputArr').value.replace(new RegExp('\n', 'g'), '' ).split(',').map(el => parseInt(el));
+    let inputArray = document.getElementById('inputArr').value.split(',').map(el => parseInt(el));
     let isValid = true;
-    inputArea.forEach(function(elem){
+    inputArray.forEach(function(elem){
         if (isNaN(elem)){
             document.getElementById('validationError').innerHTML='Array contains non number element.';
             isValid = false;
         }
     });
-    return isValid ? inputArea : undefined;
+    return isValid ? inputArray : undefined;
 }
 
 function clearPreviousResults() {
@@ -25,7 +25,7 @@ function processSorting() {
     if (inputArray) {
         var sortedArray = insertionSort(inputArray);
         //print results
-        document.getElementById('sortedArr').value = sortedArray.join(', ');
+        document.getElementById('sortedArr').value = sortedArray.join(',');
         document.getElementById('numberOfElements').innerHTML = inputArray.length;
     }
 }
