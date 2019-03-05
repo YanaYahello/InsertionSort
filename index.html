@@ -8,17 +8,19 @@
 <body>
 <div>
 <h1>Insertion Sort</h1>
-<h2>Imput array:</h2>
+    <h2>Imput array:</h2>
+<label for ="inputArr"></label>
 <textarea rows="10" cols="100" id="inputArr"></textarea>
 <br>
 <button id="button" onclick="processSorting()">Sort</button>
 </div>
 <div>
-<h2>Output:</h2>
-<textarea rows="10" cols="100" id="sortedArr"></textarea>
-<p>Number of elements (n): <span style="color: blue" id="numberOfElements"/></p>
-<p>Complexity O(n): log(n)</p>
-<p><span style="color: red" id="validationError"/></p>
+    <h2>Output:</h2>
+<label for ="sortedArr"></label>
+<textarea  rows="10" cols="100" id="sortedArr"></textarea>
+    <p>Number of elements (n): <span style="color: blue" id="numberOfElements"></span></p>
+<p>Complexity O(n): n<sup>2</sup></p>
+    <p><span style="color: red" id="validationError"></span></p>
 </div>
 <script src="mainJs.js"></script>
 </body>
